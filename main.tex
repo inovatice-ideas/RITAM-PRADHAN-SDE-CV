@@ -1,0 +1,227 @@
+% Document class and font size
+\documentclass[a4paper,9pt]{extarticle}
+% \documentclass[10pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{letterpaper, margin=0.5in, bottom=0.4in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{bibentry}
+\usepackage{fontawesome5} % For Icons
+
+% Publications (Bibtex List)
+\begin{filecontents}{publication.bib}
+@article{sarkar2024crop,
+  title={Crop Yield Prediction Using Multimodal Meta-Transformer and Temporal Graph Neural Networks},
+  author={Sarkar, Somrita and Dey, Anamika and Pradhan, Ritam and Sarkar, Upendra Mohan and Chatterjee, Chandranath and Mondal, Arijit and Mitra, Pabitra},
+  journal={IEEE Transactions on AgriFood Electronics},
+  year={2024},
+  publisher={IEEE}
+}
+% @article{mitra2024comparative,
+%   title={Comparative Study on NDVI Prediction using Advanced Deep Learning Architectures},
+%   author={Mitra, Pabitra and Dey, Anamika and Sarkar, Somrita and Pradhan, Ritam and Mondal, Arijit},
+%   journal={Elsevier Computers and Electronics in Agriculture},
+%   year={2024},
+%   publisher={Elsevier}
+% }
+\end{filecontents}
+
+% Formatting
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+%%%%%%%%%%
+
+% Begin document
+\begin{document}
+
+% Format style of publication
+\bibliographystyle{plain}
+\nobibliography{publication}
+
+% Disable page numbers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+% \fancyhead[L]{\textit{Ritam Pradhan}}
+% \fancyhead[R]{\textit{\# month \#year}}
+\thispagestyle{empty} % Remove header from the first page
+
+% Personal Info and Contacts Section
+\begin{center}
+    \vspace{-0.8cm}
+    \textbf{\huge Ritam Pradhan} \\ \vspace{2pt}
+    \faPhone*
+    \small \textbf{+916290473988} $\mid$
+    \faIcon{envelope}
+    \textbf{\href{mailto:ritam.pradhan2002@gmail.com}{ritam.pradhan0602@gmail.com}} $\mid$
+    \faGraduationCap
+    \textbf{\href{https://scholar.google.com/citations?user=2rvQymgAAAAJ&hl=en}{Ritam Pradhan}} 
+    $\mid$
+    \faIcon{linkedin}
+    \textbf{\href{https://www.linkedin.com/in/ritam-pradhan/}{ritam-pradhan}} 
+    $\mid$
+    \faIcon{github}
+    \textbf{\href{https://github.com/inovatice-ideas}{inovatice-ideas}}
+\end{center}
+
+% Education Section
+\section*{EDUCATION}
+\vspace{-0.2cm}
+\noindent
+\textbf{Indian Institute of Technology Kharagpur} | \textit{Kharagpur, India} \hfill \textbf{\textit{Dec 2020 - Present}}\\ % University name and location and timline
+M.Tech Dual 5Y in Quality Engineering Design and Manufacturing (Industrial Electronics Vertical) \hfill CGPA: 8.58/10.00 \\ % Degree and GPA
+Minor in Computer Science and Engineering (B.Tech 4Y) \\
+% \hfill CGPA: 7.57/10.00 \\ % Degree and GPA
+Micro Specialization in Artificial Intelligence and Applications \\ 
+% \hfill CGPA: 8.76/10.00 % Degree and GPA
+\vspace{-0.5cm}
+
+% Experience Section
+\section*{WORK EXPERIENCE}
+% Internship-3
+\vspace{-0.2cm}
+\noindent
+\textbf{SDE Intern $|$ BNY Mellon} | \textit{Pune, India} \hfill \textbf{\textit{May 2024 - July 2024}} \\ % Company name and location and date
+\textit{\textbf{Overview:} Engineering \textbf{Large Data Reconciliation} framework after migration of financial data from IBM DB2 to Oracle SQL}  % Overview
+\vspace{-0.15cm}
+\begin{itemize} % Job responsibilities and achievements
+    \item Researched and experimented with \textbf{4} PDF file reader libraries to understand the data extraction process from the document.
+    \item Developed a versatile PDF comparison utility that successfully compared \textbf{12 reports} and logged the exact locations of the errors.
+    \item Crafted \textbf{12 Gherkins} automation test cases for validating the functionalities of the new application based on the old application.
+    \item Boosted automation script runtime efficiency by \textbf{87.5\%} on optimizing performance parameters and enhancing underlying logic.
+\end{itemize}
+
+% Internship-2
+\vspace{-0.1cm}
+\noindent
+\textbf{ML Research Intern $|$ CSIR Indian Institute of Petroleum} | \textit{Dehradun, India} \hfill \textbf{\textit{May 2023 - Jun 2023}}\\ % Company name and location and date
+\textit{\textbf{Overview:} Monitoring and Predicting the Catalytic Health of the catalysts used in tri-reforming of Methane using Machine Learning}  % Overview
+\vspace{-0.1cm}
+\begin{itemize} % Job responsibilities and achievements
+    \item Engineered the original dataset into \textbf{23 input} and \textbf{4 output} variables by converting categorical data into numerical data.
+    \item Compared the performance of the \textbf{7} different ML models on the transformed data based on \textbf{R-score} and \textbf{RMSE} score.
+    \item Achieved RMSE of \textbf{7.33} and R-score of \textbf{97.02\%} using ANN with Bayesian Regularization Backpropagation algorithm.
+\end{itemize}
+
+% Internship-1
+\vspace{-0.1cm}
+\noindent
+\textbf{Data Science Intern $|$ SkillVertex} | \textit{Bangalore, India} \hfill \textbf{\textit{Dec 2021 - Feb 2022}} \\ % Company name and location and date
+\textit{\textbf{Overview:} \textbf{Predictive analysis} to identify employees eligible for promotion in HR Analytics, categoried by their eligibility criteria}  % Overview
+\vspace{-0.15cm}
+\begin{itemize} % Job responsibilities and achievements
+    \item Carried out \textbf{univariate}, \textbf{bivariate} and \textbf{multivariate analysis} to identify the dataset trend and handle Imbalanced Datasets.
+    \item Applied \textbf{Label Encoding} to \textbf{5} features and generated the \textbf{heatmap} of \textbf{12} features to visualize and analyze the correlation.
+    \item Trained and evaluated \textbf{3 ML models} and an accuracy of \textbf{93.63\%} was obtained using the \textbf{Random Forest Classifier} model.
+\end{itemize}
+
+% Projects Section
+\vspace{-0.3cm}
+\section*{PROJECTS}
+% % PROJECT-5
+% \vspace{-0.15cm}
+% \noindent
+% \textbf{Spatio-Temporal Rainfall Runoff Modelling using GNN} | \textit{Bachelor Term Project-1} \hfill \textbf{\textit{Aug 2023 - Present}} % Project name and timeline
+% \vspace{-0.1cm}
+% \begin{itemize}
+%     \item Executed an in-depth study of \textbf{Graph Neural Networks} and the \textbf{PyG Library} for advanced GNN model development.
+%     \item Transformed \textbf{2-dimensional CSV} data into \textbf{graph-based} representations, capturing the spatial information for input.
+%     \item Experimented with TGCN, DCRNN and GConvGRU layers, with \textbf{DCRNN} layer achieving the best \textbf{RMSE} of \textbf{0.10698}.
+% \end{itemize}
+
+% PROJECT-4
+\vspace{-0.15cm}
+\noindent
+\textbf{Crop Yield Prediction Using Multimodal Meta-Transformer and Temporal GNN} | \textit{IEEE} \hfill \textbf{\textit{Dec 2023 - Jul 2024}} % Project name and timeline
+\vspace{-0.1cm}
+\begin{itemize}
+    \item Contributed to the development of \textbf{PCA} and \textbf{Temporal GNN} layers in the deep learning framework for classification.
+    \item Concluded \textbf{96.77\% accuracy} with our proposed model which outperformed \textbf{LSTM, 1D Conv, and Transformer} models.
+    \item Conducted \textbf{ablation test} on the model to provide insights into the relative significance and impact of each of the \textbf{3} components.
+\end{itemize}
+
+% % PROJECT-3
+% \vspace{-0.1cm}
+% \noindent
+% \textbf{Deep Learning Architecture for Short-Term Flood Forecasting} | \textit{Bachelor Term Project-2} \hfill \textbf{\textit{Jan 2024 - Apr 2024}} % Project name and timeline
+% \vspace{-0.2cm}
+% \begin{itemize}
+%     \item Pretrained our forecasting model on the widely recognized robust M4 dataset with 4216 diverse time-series data points.
+%     \item Utilized Transfer Learning by integrating the layers of the pre-trained model with a custom layer to optimize our model.
+%     \item Obtained NSE of 99.01\% and RMSE of 0.0819, outperforming BiLSTM, GRU, Transformer Encoder and TCN models.
+% \end{itemize}
+
+% PROJECT-2
+\vspace{-0.05cm}
+\noindent
+\textbf{COVID-19 Time Series Clustering and Analysis} | \textit{Research Internship} \hfill \textbf{\textit{Dec 2022 - Jun 2023}} % Project name and timeline
+\vspace{-0.15cm}
+\begin{itemize}
+    \item Generated country data of \textbf{183} tweet files from coordinates using the \textbf{Ball Tree} algorithm with \textbf{haversine distance} metric.
+    \item Studied the trend of COVID-19 country-wise among \textbf{30 countries} with a minimum of \textbf{19 tweets per day} for clustering.
+    \item Determined \textbf{7 optimal clusters} while passing the data through \textbf{K-Means Time Series Clustering} and \textbf{silhouette} visualizer.
+\end{itemize}
+
+% PROJECT-1
+\vspace{-0.05cm}
+\noindent
+\textbf{Quizzical App} | \textit{Front-End Development Project} \hfill \textbf{\textit{Dec 2022 - Dec 2022}} % Project name and timeline
+\vspace{-0.15cm}
+\begin{itemize}
+    \item Built an end-to-end \textbf{React JS}-based quiz app to let the user test their knowledge based on \textbf{3} difficulty levels chosen by them.
+    \item Made a drop-down list for the user to choose the settings for the quiz and requested \textbf{10+ API calls} for the list of questions.
+    \item Created interactive UI with \textbf{5 key functionalities}, including score and correct answers visualization for user clarity.
+\end{itemize}
+
+% Publications
+\vspace{-0.4cm}
+\section*{PUBLICATIONS}
+\vspace{-0.3cm}
+\noindent
+% Publication Status: In-Progress, Submitted, Reviewed, Published
+\begin{itemize}
+    \item \bibentry{sarkar2024crop} (Published)
+\end{itemize}
+% \vspace{-0.3cm}
+% \begin{itemize}
+%     \item \bibentry{mitra2024comparative} (Submitted)
+% \end{itemize}
+
+% Coursework Section
+\vspace{-0.4cm}
+\section*{COURSEWORK}
+    \vspace{-0.2cm}
+    Programming and Data Structures*, Algorithms-1*, Probability and Statistics, Machine Learning Foundations and Applications*, Artificial Intelligence Foundations and Applications, Deep Learning Foundations and Applications, Data Analytics, Data Management System, Computer Networks, Computer Architecture and Operating System (* marked courses have laboratory component)
+
+% Skills Section
+\vspace{-0.15cm}
+\section*{SKILLS}
+\vspace{-0.2cm}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{4ex}} l }
+Programming Languages & C, C++, Java, Python, JavaScript, TypeScript, HTML, CSS, Gherkins \\
+Software/Tools & MATLAB, Git, Visual Studio Code, Figma, MS Excel, MySQL, MongoDB, Cucumber, Jira, Maven\\
+Frameworks/Libraries & PyTorch, Keras, Tensorflow, NumPy, Pandas, Scikit-learn, Matplotlib, TSLearn, ReactJS\\
+\end{tabular}
+
+% Extra-Curricular Activities Section
+\vspace{-0.15cm}
+\section*{EXTRA-CURRICULAR ACTIVITIES}
+\vspace{-0.35cm}
+\noindent
+\begin{itemize}
+    \item Bagged the \textbf{CodeForces Specialist rank} with a \textbf{rating of 1472}, demonstrating strong problem-solving skills and consistency.
+    \item Earned \textbf{50 Days Badge 2023}, \textbf{May 2023} and \textbf{100 Days Badge 2022} badge for solving all challenging problems on \textbf{Leetcode}.
+    \item Scrutinized the source of electricity data for the IIT KGP \textbf{Inter-Hall Bronze Winning Case Study} team among \textbf{21 teams}.
+    \item Aced the \textbf{best News-Bulletin feature award} at the Gymkhana Website Hackathon hosted by IIT KGP out of \textbf{17 teams}.
+    % \item Volunteered at the \textbf{Inter BNY Chess Tournament}, 2024, overseeing and conducting matches among \textbf{10+ participants}.
+\end{itemize}
+
+% End document
+\end{document}
